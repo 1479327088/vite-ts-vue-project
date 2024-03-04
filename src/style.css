@@ -1,0 +1,79 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  /* 主题模式样式 
+  *   --text-color  :  #app文字颜色
+  *   --title-right-text-color : 系统头部文字颜色[登录用户名称、角色、主题模式切换]
+  *   --title-text-color ： 系统头部文字颜色[系统名称]
+  *   --text-menu-color  : 菜单收缩/打开图标颜色
+  *   --bg-color ： 系统头部[背景颜色]、切换主题图标[背景颜色]
+  *   --border-color : 菜单最右边的边界线颜色
+  *   --menu-bg-color ： 面包屑背景颜色
+  *   --menu-hover-bg-color ： 菜单栏背景颜色
+  *   --tag-color ： tag的border线条颜色，文字color颜色
+  *   --tag-active-color ： tag选中的背景颜色
+  *   --content-bg-color ： 内容区域外层 border线条颜色，背景颜色
+  *   --content-router-color ： 内容区域内层 border线条颜色，背景颜色
+  */  
+  --text-color:#606266;
+  --title-right-text-color:#FFF;      
+  --title-text-color:#FFF;
+  --text-menu-color:#303133;
+  --bg-color:#004ba0;
+  --border-color:#e6e6e6;
+  --menu-bg-color:#FFF;
+  --menu-hover-bg-color:#FFF;
+  --tag-color:#409EFF;
+  --tag-active-color:#d9ecff;
+  --content-bg-color:#f5f5f5;
+  --content-router-color:#FFF;
+
+  --switch-border-color:#8e8e8e;
+  --switch-bg-color:rgba(0, 75, 160, 0.2);
+  
+}
+
+html,body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: #FFF;
+}
+#app{
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  color:var(--text-color)
+}
+
+/* 暗黑模式 */
+html.zt_dark{
+  --text-color:#E5EAF3;
+  --title-right-text-color:#E5EAF3;
+  --title-text-color:#409EFF;
+  --text-menu-color:#E5EAF3;
+  --bg-color:#213d5b;
+  --border-color:#1d3043;
+  --menu-bg-color:#18222c;
+  --menu-hover-bg-color:#1d3043;
+  --tag-color:#E5EAF3;
+  --tag-active-color:#213d5b;
+  --content-bg-color:#18222c;
+  --content-router-color:#18222c;
+
+  
+  --switch-border-color:#409EFF;
+  --switch-bg-color:rgba(84, 84, 84, .65);
+}
