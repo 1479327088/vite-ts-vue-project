@@ -12,7 +12,13 @@
             <content-title></content-title>
             <div class="content_router">
                 <div class="menu_router_view">
-                    <router-view></router-view>
+                    <el-scrollbar noresize class="scroll-content">
+                        <router-view v-slot="{ Component , route  }">
+                            <transition :name="route.meta.transition || 'slideLeft'" mode="out-in">
+                                <component :is="Component" />
+                            </transition>
+                        </router-view>
+                    </el-scrollbar>
                 </div>
             </div>
         </article>
@@ -73,11 +79,50 @@ userStore.getMenuByUser();
                 width: calc(100% - 50px);
                 height: calc(100% - 30px);
                 margin: 15px 25px;
-                background-color: var(--content-router-color);
+                // background-color: var(--content-router-color);
                 overflow: auto;
                 border-top: 1px solid var(--content-router-color);
+                .scroll-content{
+                    width: 100%;
+                    height: 100%;
+                    :deep(.el-scrollbar__view){
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
             }
         }
     }
 }
+
+.slideLeft-enter-active,
+.slideLeft-leave-active{
+    transition: all 0.5s;
+}
+.slideLeft-enter-from,
+.slideLeft-leave-to{
+    opacity: 0;
+    transform: translateX(100px)
+}
+
+.slideRight-enter-active,
+.slideRight-leave-active{
+    transition: all 0.5s;
+}
+.slideRight-enter-from,
+.slideRight-leave-to{
+    opacity: 0;
+    transform: translateX(-100px)
+}
+
+.slideTop-enter-active,
+.slideTop-leave-active{
+    transition: all 0.5s;
+}
+.slideTop-enter-from,
+.slideTop-leave-to{
+    opacity: 0;
+    transform: translateY(100px)
+}
+
 </style>

@@ -35,7 +35,7 @@ const routes = [
         name: 'personCenter',
         component: layout,
         meta:{
-            title: "首页",
+            title: "个人中心",
             content: "disable-no", 
         },
         children:[
@@ -44,7 +44,8 @@ const routes = [
                 component:() => import('@V/personCenter.vue'),
                 meta:{
                     title: "个人中心",
-                    content: "disable-no", 
+                    content: "disable-no",
+                    transition:"slideRight"
                 },
             }
         ]
@@ -65,6 +66,7 @@ const routes = [
                 meta: {
                     title: "用户管理",
                     content: "disable-no",
+                    transition:"slideTop"
                 }
             },
             {
@@ -73,6 +75,7 @@ const routes = [
                 meta: {
                     title: "部门管理",
                     content: "disable-no",
+                    transition:"slideLeft"
                 }
             }
         ]

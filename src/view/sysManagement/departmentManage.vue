@@ -6,5 +6,9 @@
 
 </script>
 <style scoped lang="scss">
-
+.home_index{
+    height: 100%;
+    width: 100%;
+    background-color: var(--content-router-color);
+}
 </style>
