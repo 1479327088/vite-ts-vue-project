@@ -4,4 +4,5 @@ console.log('a',a);
 
 // export { a }
 
-console.log('122222222222222222');
+console.log('1.tx');
+
